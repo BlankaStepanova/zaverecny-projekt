@@ -1,0 +1,19 @@
+<div class="header__flex">
+    <nav class="menu">
+
+
+        <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
+
+        <label for="menu-checkbox" class="menu__toggler">☰ Menu</label>
+
+        <ul class="menu__list">
+            <li class="menu__item {{ 'menu__item--active' if page.fileSlug === '' }}"><a href="/" class="menu__link">Orlické hory</a></li>
+            <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'o-orlickych-horach' }}"><a href="/o-orlickych-horach/" class="menu__link">O Orlických horách</a></li>
+            <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'tipy-na-vylety' }}"><a href="/tipy-na-vylety/" class="menu__link">Tipy na výlety</a></li>
+            <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'ubytovani' }}" ><a href="#" class="menu__link">Ubytování</a></li>
+            <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'kontakt' }}"><a href="#" class="menu__link">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <img class="find" src="/images/lupa.jpg" alt="Vyhledávač">
+</div>

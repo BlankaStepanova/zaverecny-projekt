@@ -1,0 +1,653 @@
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+/* font-family: 'Lobster', cursive;
+font-family: 'Open Sans', sans-serif; */
+
+/* backround-color:	#f5f5f5 */
+
+:root {
+    --bílá: white;
+    --text: #696969;
+    --primary: #57AACA;    
+}
+
+
+body {
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    background-color:	#f5f5f5;
+    color: var(--text);
+    max-width: 100%;
+}
+
+/* Phone */
+
+.header {
+    background-color: var(--primary);
+    min-height: 60px;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    margin: 0;
+    color: 	#d3d3d3;
+    text-align: center;
+    font-size: 50px;
+}
+
+/* Menu */
+
+.header__flex {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+
+}
+
+.header__flex img {
+    justify-content: flex-end;
+    min-height: 40px;
+    max-height: 45px;
+    background-color:#d3d3d3 ;
+}
+
+.menu {
+    flex-grow: 1;
+    background-color:#d3d3d3 ;
+    min-height: 40px;
+    padding-top: 5px;
+}
+
+.menu__checkbox {
+    position: absolute;
+    left: -9999px;
+}
+
+.menu__list {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color:#d3d3d3;
+}
+
+.menu__item {
+    border-bottom: 1px solid white;
+}
+
+.menu__link {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.menu__link:hover {
+    background-color:#dcdcdc;
+}
+
+.menu__checkbox:checked ~ .menu__list {
+    display: block;
+}
+
+.menu a {
+    color: var(--text);
+}
+
+.menu__item--active .menu__link {
+    background-color:#dcdcdc;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #d3d3d3;
+    text-align: center;
+}
+
+.footer p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 10px;
+}
+
+
+/* ------Index------ */
+
+/* Foto - později možná banner!! */
+
+.banner {
+    color: black;
+    background-image: url(/images/banner1.jpg);
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    min-height: 180px;
+    object-fit: cover;
+}
+
+.banner h2 {
+    padding: 20px 10px 10px 20px;
+    margin-top: 0;
+}
+
+.banner__button--style {
+    text-decoration: none;
+	background-color: whitesmoke;
+	color:black;
+	border-radius: 30px;
+    max-width: 120px;
+    padding: 5px 20px;
+    margin-left: 20px;
+}
+
+.banner__button a:hover {
+	background-color: black;
+    color: whitesmoke;
+}
+
+.news {
+    padding: 0 20px;
+}
+
+.news img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+.news__first,
+.news__second,
+.news__third {
+    width: 100%;
+    text-align: center;
+    background-color: #dcdcdc;
+    border-radius: 5px;
+    box-shadow: grey 2px 2px 10px;
+}
+
+.news h2 {
+    text-align: center;
+}
+
+.news h3 {
+    margin-top: 0;
+    padding: 10px;
+    font-weight: normal;
+}
+
+/* Index - gallery */
+
+.gallery {
+    padding: 0 20px;
+}
+
+.gallery img {
+    width: 100%;
+}
+
+.gallery h2 {
+    text-align: center;
+}
+
+/* Index - infocentra */
+
+.info__links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: white;
+}
+
+.info {
+    padding: 0 20px;
+    background-color: 	#696969;
+    text-align: center;
+}
+    
+.info a,
+.info h2 {
+    color: white;
+}    
+
+.info h2 {
+    margin-bottom: 0;
+}
+
+.info a {
+    margin: 10px;
+}
+
+
+/* ---- O Orlických horách ---- */
+
+.about h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.about {
+    padding: 10px 20px;
+}
+
+.about img {
+    width: 100%;
+}
+
+
+.history {
+    padding: 10px 20px;
+    background-color: #dcdcdc;
+}
+
+.history h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.season h3 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.season__summer {
+    padding: 10px 20px;
+}
+
+.season__winter {
+    padding: 10px 20px;
+    background-color: #dcdcdc;
+}
+
+/* ----Tipy na výlety---- */
+
+.tips {
+    padding: 10px 20px;
+}
+
+.tips h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.tips__link {
+    text-decoration: none;
+    background-color:	#696969;
+    color: white;
+
+}
+
+.tips__grid--one {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 10px;
+    text-align: center;
+}
+
+.tips__grid--one a:hover {
+    text-decoration: underline;
+}
+
+.tips__grid--two a:hover {
+    text-decoration: underline;
+}
+
+.tips__grid--two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.tips__link--two {
+    grid-area: 1/2/2/3;
+}
+
+/* ----Rozhledny---- */
+
+.towers {
+    padding: 10px 20px;
+}
+
+.towers h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.towers h3,
+.towers p {
+    text-align: center;
+}
+
+.towers h3 {
+    padding-top: 10px;
+}
+
+.towers p {
+    padding-bottom: 10px;
+}
+
+.towers img {
+    width: 100%;
+}
+
+.tower {
+    background-color: #d3d3d3	;
+}
+
+.tower p {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 5px;
+}
+
+
+/* ----Výlety na míru----*/
+
+.guide {
+    padding: 10px 20px;
+}
+
+.guide img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.guide h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.trip {
+    padding: 10px 20px;
+}
+
+.trip__left,
+.trip__right {
+    background-color: #d3d3d3
+}
+
+.trip h3 {
+    text-align: center;
+    padding-top: 5px;
+}
+
+.trip p {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.trip ul {
+    font-weight: bold;
+}
+
+
+.form {
+    padding: 10px 20px;
+}
+
+.form h2 {
+    margin-top: 0;
+}
+
+.form-field label {
+    display: block;
+    font-size: 15px;
+}
+
+.form-field :is(input, textarea, select) {
+	width: 100%;
+	border: 1px solid black;
+	border-radius: 4px;
+}
+
+.required:after {
+	content: "*";
+	color: red;
+	margin-left: 4px;
+}
+
+
+
+/* Tablet */
+
+@media screen and (min-width: 640px) {
+
+
+    /* ----Index---- */
+    
+    .banner {
+        min-height: 250px;
+    }   
+
+    .news__grid {
+        display: flex;
+	    justify-content: space-between;
+        gap: 20px;
+    }
+
+    .news__grid img {
+        max-width: 100%;
+        height: 230px;
+        object-fit: cover;
+    }
+
+    .gallery__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+
+    .gallery__grid img {
+        max-width: 100%;
+        height: 270px;
+        object-fit: cover;
+    }
+
+    /* ----O Orlických horách---- */
+
+    .about__foto {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .season__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        text-align: justify;
+    }
+
+    .season__winter {
+        background-color:#f5f5f5;
+    }
+
+    .history p {
+        text-align: center;
+    }
+    
+    /* ---Tipy na výlety--- */
+
+    /* ---Rozhledny--- */
+
+    .towers__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .towers__grid img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .towers__grid h3 {
+        padding-top: 0;
+    }
+
+    /* ---Výlety na míru--- */
+
+    .guide__left {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .guide__right {
+        margin-top: 10px;
+    }
+
+    .trip__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+
+
+}
+
+
+/* PC */
+
+@media screen and (min-width: 1000px) {
+
+    /* Menu */
+
+    .menu__toggler {
+        display: none;
+    }
+
+    .menu__list {
+        display: flex;
+    }
+
+    .menu__item {
+        border-bottom: 0;
+        /* border-right:1px solid white ; */
+    }
+
+    .menu {
+        padding-top: 0;
+        padding-left: 50px;
+    }
+
+    /* ---Index--- */
+
+    .banner {
+        min-height: 300px;
+    }
+
+    .banner h2 {
+        padding-left: 50px;
+    }
+
+    .banner__button--style {
+        margin-left: 50px;
+    }
+
+    .news {
+        padding: 0 50px;
+    }
+
+    .gallery {
+        padding: 0 50px;
+    }
+
+    .gallery__grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .info__links {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+        padding: 20px 0;
+    }
+
+    .info {
+        padding: 0 50px;
+        margin-top: 10px;
+    }
+
+    /* ---O Orlických horách--- */
+
+    .about {
+        padding: 10px 50px;
+    }
+
+    .about__grid {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 50px;
+        justify-items: center;
+    }
+    
+    .about__foto {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about__foto img {
+        width: 300px;
+        object-fit: cover;
+    }
+
+    .history {
+        padding: 10px 100px;
+    }
+
+    .season {
+        padding: 0 50px;
+    }
+
+    /* ---Tipy na výlety--- */
+
+    .tips {
+        padding: 0 50px;
+    }
+
+    .tips__grid--one {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    /* ---Rozhledny--- */
+
+    .towers {
+        padding: 0px 100px 10px 100px;
+    }
+
+    /* ---Výlety na míru--- */
+
+    .guide,
+    .trip {
+        padding: 10px 50px;
+    }
+
+    .guide__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .guide__right {
+        margin-top: 0;
+        justify-items: center;
+    }
+
+    .form {
+        padding: 10px 150px;
+    }
+}
+
+
+
+
+
+
